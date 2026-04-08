@@ -1,7 +1,21 @@
-export default function HomePage() {
+import PostList from "@/components/PostsList";
+import SpinLoader from "@/components/SpinLoader";
+import { Suspense } from "react";
+
+export default async function HomePage() {
+
   return (
     <div>
-      <h1 className='text-sm'>Texto no meu h1</h1>
+      <header>
+        <h1 className="text-6xl font-bold text-center py-8">Aqui é a Header</h1>
+      </header>
+
+      <Suspense fallback={<SpinLoader/>}>
+        <PostList />
+      </Suspense>
+      <footer>
+        <h1 className="text-6xl font-bold text-center py-8">Footer</h1>
+      </footer>
     </div>
   )
 }
