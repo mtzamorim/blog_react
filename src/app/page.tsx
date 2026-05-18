@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { Header } from "@/components/Header";
+import { PostHeading } from "@/components/PostHeading";
 import PostList from "@/components/PostsList";
 import SpinLoader from "@/components/SpinLoader";
 import Image from "next/image";
@@ -18,9 +19,7 @@ export default async function HomePage() {
         <div className="flex flex-col gap-4 sm:justify-center">
           <time className="text-slate-600 block text-sm/tight" dateTime="2025-04-20">20/04/2025 10:00</time>
 
-          <h1 className="text-2xl/tight font-extrabold sm:text-4xl">
-            <Link href="#">Lorem ipson dolor sit</Link>
-          </h1>
+          <PostHeading url="#" as="h1">Esse é um titulo</PostHeading>
 
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque ipsum a sit eaque minus, architecto excepturi ex labore nostrum totam libero, error asperiores ipsam, quo dolor itaque recusandae. Totam, ad!
         Molestias corporis voluptas error qui, voluptates animi, repellendus provident itaque ipsum impedit veniam inventore omnis alias laborum vel iusto atque nulla cum non dicta autem ipsa voluptatem. Eius, nobis officia.</p>
