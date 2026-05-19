@@ -1,5 +1,5 @@
 import { PostCoverImage } from "../PostCoverImage";
-import { PostHeading } from "../PostHeading";
+import { PostSummary } from "../PostSummary";
 
 export function PostFeatured(){
     const slug = 'qualquer'
@@ -16,28 +16,7 @@ export function PostFeatured(){
             priority: true
           }}
         />
-        <div className="flex flex-col gap-4 sm:justify-center">
-          <time
-            className="text-slate-600 block text-sm/tight"
-            dateTime="2025-04-20"
-          >
-            20/04/2025 10:00
-          </time>
-
-          <PostHeading url={postLink} as="h1">
-            Esse é um titulo
-          </PostHeading>
-
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque
-            ipsum a sit eaque minus, architecto excepturi ex labore nostrum
-            totam libero, error asperiores ipsam, quo dolor itaque recusandae.
-            Totam, ad! Molestias corporis voluptas error qui, voluptates animi,
-            repellendus provident itaque ipsum impedit veniam inventore omnis
-            alias laborum vel iusto atque nulla cum non dicta autem ipsa
-            voluptatem. Eius, nobis officia.
-          </p>
-        </div>
+       <PostSummary postHeading={"h1"} postLink={""} createdAt={"2025-03-30T07:11:33"} title={"Como a tecnologia impacta nosso bem-estar"} excerpt={"Também ajuda a organizar melhor os arquivos e componentes, o que facilita a manutenção do projeto no longo prazo."} />
       </section>
     )
 }
