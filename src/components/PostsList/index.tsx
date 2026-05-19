@@ -1,4 +1,5 @@
 import { postRepository } from "@/repositories/post";
+import { formatDateTime, formatRelativeDate } from "@/utils/format-datetime";
 import { PostCoverImage } from "../PostCoverImage";
 import { PostHeading } from "../PostHeading";
 
@@ -26,8 +27,9 @@ export default async function PostList() {
           <time
             className="text-slate-600 block text-sm/tight"
             dateTime={post.createdAt}
+            title={formatRelativeDate(post.createdAt)}
           >
-            {post.createdAt}
+            {formatDateTime(post.createdAt)}
           </time>
 
           <PostHeading url={postLink} as="h2">
