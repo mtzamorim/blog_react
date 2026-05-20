@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container";
+import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -22,9 +23,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
         <Container>
           <Header />
           {children}
-          <footer>
-            <h1 className="text-6xl font-bold text-center py-8">Footer</h1>
-          </footer>
+          <Footer />
         </Container>
       </body>
     </html>
